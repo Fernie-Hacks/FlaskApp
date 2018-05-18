@@ -1,7 +1,7 @@
 # FlaskApp
 
 ## Problems to Solve
-**Restaurant Application using Flask web development framework?** 
+**Create Restaurant Application using Flask Web Development Framework** 
 
 1. Create all application routes
 2. Add templates and forms to all pages
