@@ -1,19 +1,17 @@
 # FlaskApp
 
 ## Problems to Solve
-**1. What are the most popular three articles of all time?** 
-   Which articles have been accessed the most? 
-   Present this information as a sorted list with the most popular article at the top.
+**Restaurant Application using Flask web development framework?** 
 
-**2. Who are the most popular article authors of all time?**
-  That is, when you sum up all of the articles each author has written, which authors get the most page views?
-  Present this as a sorted list with the most popular author at the top.
-
-**3. On which days did more than 1% of requests lead to errors?**
-  The log table includes a column status that indicates the HTTP status code that the news site sent to the user's browser.
+1. Create all application routes
+2. Add templates and forms to all pages
+3. Add CRUD functionality
+4. Add API Endpoints
+5. Add Style to webpages
 
 ## Environment
-* Python  3.5.2
+* Python  2.7.12
+* Flask   0.12.2
 
 ## Suggested Setup
 
