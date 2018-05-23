@@ -74,10 +74,12 @@ def newMenuItem(restaurant_id):
             itemName = request.form['name']
             if request.form['price']:
                 itemPrice = "$" + request.form['price']
-            itemPrice = "$0.00"
+            else:
+                itemPrice = "$0.00"
             if request.form['description']:
                 itemDescription = request.form['description']
-            itemDescription = "Not Available"
+            else:
+                itemDescription = "Not Available"
             newItem = MenuItem(name = itemName, price = itemPrice, description = 
                                itemDescription, restaurant_id = restaurant_id)
             session.add(newItem)
@@ -115,7 +117,7 @@ def deleteMenuItem(restaurant_id, menu_id):
     if request.method == 'POST':
         session.delete(itemToRemove)
         session.commit()
-        return redirect(url_for('showMenu')) 
+        return redirect(url_for('showMenu', restaurant_id = restaurant_id)) 
     else:        
         return render_template('deleteMenuItem.html', restaurant = 
                                restaurant, item = itemToRemove)
