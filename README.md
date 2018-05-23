@@ -53,5 +53,5 @@ $ python lotsofmenus.py
 ```
 2. Load the data onto the database
 ```sql
-python flaskApp.py
+$ python flaskApp.py
 ```
