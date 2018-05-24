@@ -101,10 +101,11 @@ def editMenuItem(restaurant_id, menu_id):
             itemToEdit.price = "$" + request.form['price']
         if request.form['description']:
             itemToEdit.description = request.form['description']
+        if request.form["course"]:
+            itemToEdit.course = request.form['course']
         session.add(itemToEdit)
         session.commit()
-        return redirect(url_for('editMenuItem', restaurant_id = 
-                                restaurant_id, menu_id = menu_id))
+        return redirect(url_for('showMenu', restaurant_id = restaurant_id))
     else:        
         return render_template('editMenuItem.html', restaurant = 
                                restaurant, item = itemToEdit)

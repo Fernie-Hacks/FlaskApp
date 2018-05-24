@@ -1,0 +1,61 @@
+.header-grid {
+	display: flex;
+	margin: 3% 10% 0% 10%;
+	border-bottom: .3vw solid #7d97ad;
+	text-align: center;
+}
+
+.header-grid .title-col {
+	flex: 1;
+}
+
+#title {
+	color: #2d3c49;
+	font-family: 'Rajdhani';
+	font-size: 5.2vw;
+	float: center;
+}
+
+.menu-grid {
+	display: flex;
+	margin: 3% 10% 2% 10%;
+}
+
+.menu-grid .menu-col {
+	flex: 1;
+}
+
+.menuItem{
+	border: .1vw solid #ae9f65;
+}
+
+.section-grid {
+	display: flex;
+	margin: 3% 10% 0% 10%;
+}
+
+.section-grid .section-col {
+	flex: 1;
+}
+
+p {
+	font-size: 3.3vw;
+	font-family: 'Rajdhani', sans-serif;
+	text-align: center;
+}
+
+.footer-grid {
+	display: flex;
+	margin: 0% 10% 0% 10%;
+}
+
+.footer-grid .footer-col {
+	flex: 1;
+}
+
+footer {
+	font-size: 3vw;
+	font-family: 'Rajdhani', sans-serif;
+	text-align: center;
+}
+

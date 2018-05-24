@@ -1,11 +1,23 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
 <body>
 	<h1> New Menu Item </h1>
 	<form action="{{url_for('newMenuItem', restaurant_id = restaurant_id)}}" method = 'POST'>
 		<p>Item Name: <input type='text' size='30' name='name' placeholder='Restaurant Name'></p>
 		<p>Cost: <input type='number' min="0" name='price' value="0" step=".01"></p>
 		<p>Description: <input type='text' size='30' name='description' placeholder='description'></p>
-		<p><input type='submit' value='Create'></p>
+		<p>Course:</p> 
+		<input type="radio" id="cb1" name="course" value="Appetizer">
+		<label for="cb1">Appetizer</label><br>
+	  	<input type="radio" id="cb2" name="course" value="Entree">
+	  	<label for="cb2">Entree</label><br>
+	  	<input type="radio" id="cb3" name="course" value="Dessert">
+	  	<label for="cb3">Dessert</label><br>
+	  	<input type="radio" id="cb4" name="course" value="Beverage">
+	  	<label for="cb4">Beverage</label><br>  
+	  	<p><input type='submit' value='Create'></p>
 	</form>
 </body>
 </html>

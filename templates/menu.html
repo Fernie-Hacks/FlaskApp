@@ -1,42 +1,69 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<!--link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}"-->
+	<meta charset="UTF-8">
+	<title>Lots of Menus</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet">
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='menuStyle.css') }}">
 </head>
 
+
 <body>
-	<h1>{{restaurant.name}}</h1>
-
-	<!--MESSAGE FLASHING EXAMPLE 
-	{% with messages = get_flashed_messages() %}
-	{% if messages %} 
-
-	<ul>
-		{% for message in messages %}
-  			<li><strong>{{message}}</strong></li>
-  		{% endfor %}
-	</ul>
-	{% endif %}
-	{% endwith %} -->
-
-	<a href = "{{url_for('newMenuItem', restaurant_id = restaurant.id)}}"> Create New Item</a>
-
-	{% for item in items %}
-	<div>
-		<p>{{item.name}} 
-			<br> 
-			{{item.description}}
-			<br>
-			{{item.price}}
-			<br>
-			<a href = "{{url_for('editMenuItem', restaurant_id = 
-			restaurant.id, menu_id = item.id)}}">Edit</a>
-			&nbsp;
-			<a href = "{{url_for('deleteMenuItem', restaurant_id = 
-			restaurant.id, menu_id = item.id )}}">Delete</a>
-		</p>
-	</div>
-
-	{% endfor %}
+	<header>
+		<div class="header-grid">
+			<div class="title-col">
+				<span id="title">{{restaurant.name}}</span>
+			</div>
+		</div>
+	</header>
+	
+		<main>	
+		<article>
+			<div class="menu-grid">
+				<div class="menu-col">
+						{% if items %} 
+							{% for item in items %}
+								<div class="menuItem">
+									<p>{{item.name}} 
+										<br> 
+										{{item.description}}
+										<br>
+										{{item.price}}
+										<br>
+										<a href = "{{url_for('editMenuItem', restaurant_id = 
+										restaurant.id, menu_id = item.id)}}">Edit</a>
+										&nbsp;
+										<a href = "{{url_for('deleteMenuItem', restaurant_id = 
+										restaurant.id, menu_id = item.id )}}">Delete</a>
+									</p>
+								</div>
+							{% endfor %}
+						{% else %}
+							<p>No Menu Items Available Yet</p>
+						{% endif %}
+					</div>
+				</div>
+		</article>
+		
+		<section class="section-grid">
+			<div class="section-col">
+				<p>
+					<a href = "{{url_for('newMenuItem', restaurant_id = restaurant.id)}}"> Create New Item</a>
+				</p>
+			</div>
+		</section>
+		<footer>
+			<div class="footer-grid">
+				<div class="footer-col">
+					<small>Fernando Gonzalez </small>
+					<small>| Email:
+						<a href="mailto:fgonz009@ucr.edu">fgonz009@ucr.edu</a>
+					</small>
+				</div>
+			</div>
+		</footer>
+	
 </body>
 </html>
 
