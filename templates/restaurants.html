@@ -27,13 +27,18 @@
 						<div class = "restaurant">
 							<p>{{restaurant.name}}
 								<br>
-								<a href="{{ url_for('editRestaurant', restaurant_id = restaurant.id)}}">Edit </a>
+								<a href="{{ url_for('editRestaurant', restaurant_id = 
+								restaurant.id)}}" class="edit">Edit </a>
 								&nbsp;
-								<a href="{{ url_for('deleteRestaurant', restaurant_id = restaurant.id)}}"> Delete</a>
-								<br>
-								<a href="{{ url_for('showMenu', restaurant_id = restaurant.id)}}">Show Restaurant's Menu</a>
+								<a href="{{ url_for('deleteRestaurant', restaurant_id = 
+								restaurant.id)}}" class = "delete"> Delete</a>
+								<div class="menu">
+									<a href="{{ url_for('showMenu', restaurant_id = 
+									restaurant.id)}}" class = "menuButton">Show Restaurant's Menu</a>
+								</div>
 							</p>
 						</div>
+						<br>
 					{% endfor %}
 				</div>
 			</div>
@@ -46,16 +51,17 @@
 				</p>
 			</div>
 		</section>
-		<footer>
-			<div class="footer-grid">
-				<div class="footer-col">
-					<small>Fernando Gonzalez </small>
-					<small>| Email:
-						<a href="mailto:fgonz009@ucr.edu">fgonz009@ucr.edu</a>
-					</small>
-				</div>
+	</main>
+	<footer>
+		<div class="footer-grid">
+			<div class="footer-col">
+				<small>Fernando Gonzalez </small>
+				<small>| Email:
+					<a href="mailto:fgonz009@ucr.edu">fgonz009@ucr.edu</a>
+				</small>
 			</div>
-		</footer>
+		</div>
+	</footer>
 </body>
 </html>
 
