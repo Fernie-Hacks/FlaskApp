@@ -1,10 +1,45 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Lots of Menus</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet">
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='newRestaurantStyle.css') }}">
+</head>
 <body>
-	<h1> New Restaurant </h1>
-	<form action="{{url_for('newRestaurant', restaurant_id = restaurant_id)}}" method = 'POST'>
-		<p>Restaurant Name:</p>
-		<input type='text' size='30' name='name'>
-		<input type='submit' value='Create'>
-	</form>
+	<header>
+		<div class="header-grid">
+			<div class="title-col">
+				<span id="title">New Restaurant</span>
+			</div>
+		</div>
+	</header>
+	
+	<main>
+		<article>
+			<div class="article-grid">
+				<div class="form-col">
+					<form action="{{url_for('newRestaurant')}}" method = 'POST'>
+						<label for="name">Enter a new Restaurant Name:</label>
+						<input type='text' size='30' name='name' placeholder='Restaurant Name'>
+						<input type='submit' value='Create'>
+					</form>
+				</div>				
+			</div>
+		</article>
+	</main>
+	
+	<footer>
+		<div class="footer-grid">
+			<div class="footer-col">
+				<small>Fernando Gonzalez </small>
+				<small>| Email:
+					<a href="mailto:fgonz009@ucr.edu">fgonz009@ucr.edu</a>
+				</small>
+			</div>
+		</div>
+	</footer>
+	
 </body>
 </html>

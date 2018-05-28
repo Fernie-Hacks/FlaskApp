@@ -28,6 +28,7 @@
 .menuItem{
 	border: .1vw solid #ae9f65;
 	background-color: #f2f2f2;
+	border-radius: .5vw;
 }
 
 .edit {

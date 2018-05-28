@@ -12,7 +12,7 @@
 #title {
 	color: #2d3c49;
 	font-family: 'Rajdhani', sans-serif;
-	font-size: 4vw;
+	font-size: 5.2vw;
 	float: center;
 }
 
@@ -29,7 +29,7 @@
     border: .1vw solid #ae9f65;
 }
 
-input[type=text], select {
+input[type='text'], select {
 	width: 100%;
     padding: 1vw 1vw;
     margin: 1vw 0;
@@ -39,6 +39,23 @@ input[type=text], select {
     box-sizing: border-box;
     font-size: 2vw;
     font-family: 'Rajdhani', sans-serif; 
+}
+
+input[type='number'], select {
+	width: 100%;
+    padding: 1vw 1vw;
+    margin: 1vw 0;
+    display: inline-block;
+    border: .1vw solid #ccc;
+    border-radius: .5vw;
+    box-sizing: border-box;
+    font-size: 2vw;
+    font-family: 'Rajdhani', sans-serif; 
+}
+
+input[type='radio'], select {
+	margin-top: 1vw;
+    font-size: 2vw;
 }
 
 input[type=submit] {
@@ -51,10 +68,25 @@ input[type=submit] {
     border: none;
     border-radius: .5vw;
     cursor: pointer;
+    font-family: 'Rajdhani', sans-serif;
+	font-size: 2vw;
+	float: center;
+}
+
+input[type='radio'], label{   
+	display:inline;
+	vertical-align:top;
+	font-size: 3.5vw;
+	font-family: 'Rajdhani', sans-serif;
 }
 
 input[type=submit]:hover {
-    background-color: #3f9144;
+	background-color: #3f9144;
+}
+
+label [type='radio'], label {
+	font-size: 3.5vw;
+	font-family: 'Rajdhani', sans-serif;
 }
 
 .cancel {
@@ -70,15 +102,13 @@ input[type=submit]:hover {
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
     cursor: pointer;
+    font-family: 'Rajdhani', sans-serif;
+	font-size: 2vw;
+	float: center;
 }
 
 .cancel:hover {
     background-color: #ab0103;
-}
-
-label {
-	font-size: 3.5vw;
-	font-family: 'Rajdhani', sans-serif;
 }
 
 .footer-grid {

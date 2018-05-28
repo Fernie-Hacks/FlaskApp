@@ -109,6 +109,25 @@ p {
 	text-align: center;
 }
 
+.newRestaurant {
+    background-color: #6ec0fd;
+    color: white;
+    padding: 1vw 1.3vw;
+    text-align: center;
+    font-size: 1.5vw;
+    margin: 1vw 0;
+    border: none;
+    border-radius: .5vw;
+    text-decoration: none;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.newRestaurant:hover {
+    background-color: #5594c5;
+}
+
 .footer-grid {
 	display: flex;
 	margin: 0% 10% 0% 10%;

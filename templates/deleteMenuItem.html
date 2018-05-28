@@ -1,13 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<meta charset="UTF-8">
+	<title>Lots of Menus</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet">
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='deleteMenuItemStyle.css') }}">
 </head>
+
 <body>
-	<h1> Are you sure you want to delete {{restaurant.name}}'s {{item.name}}? </h1>
-	<form action="{{url_for('deleteMenuItem', restaurant_id = restaurant.id, menu_id = 
-		item.id)}}" method = 'POST'>
-		<input type='submit', value = 'Delete'>
-	</form>
-	<a href = "{{url_for('showMenu', restaurant_id = restaurant.id)}}"> Cancel </a>
+	<header>
+		<div class="header-grid">
+			<div class="title-col">
+				<span id="title">Are you sure you want to delete {{restaurant.name}}'s {{item.name}}?</span>
+			</div>
+		</div>
+	</header>
+		
+	<main>
+		<article>
+			<div class="article-grid">
+				<div class="form-col">
+					<form action="{{url_for('deleteMenuItem', restaurant_id = 
+						restaurant.id, menu_id = item.id)}}" method = 'POST'>
+						<input type='submit' value = 'Delete'>
+						&nbsp;
+						<a href="{{url_for('showMenu', restaurant_id = 
+							restaurant.id)}}" class="cancel"> Cancel</a>
+					</form>
+				</div>				
+			</div>
+		</article>
+	</main>
+	
+	<footer>
+		<div class="footer-grid">
+			<div class="footer-col">
+				<small>Fernando Gonzalez </small>
+				<small>| Email:
+					<a href="mailto:fgonz009@ucr.edu">fgonz009@ucr.edu</a>
+				</small>
+			</div>
+		</div>
+	</footer>
 </body>
 </html>

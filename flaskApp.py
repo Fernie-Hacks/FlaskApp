@@ -38,7 +38,8 @@ def newRestaurant():
             session.add(newRestaurantEntry)
             session.commit()
             return redirect(url_for('showRestaurants'))
-        return redirect(url_for('newRestaurant.html'))
+        print("Before Redirect")
+        return redirect(url_for('newRestaurant'))
     else:
         return render_template('newRestaurant.html') 
 

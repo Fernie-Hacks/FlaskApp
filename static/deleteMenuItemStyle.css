@@ -12,7 +12,7 @@
 #title {
 	color: #2d3c49;
 	font-family: 'Rajdhani', sans-serif;
-	font-size: 4vw;
+	font-size: 2.8vw;
 	float: center;
 }
 
@@ -27,38 +27,28 @@
     background-color: #f2f2f2;
     padding: 2vw;
     border: .1vw solid #ae9f65;
-}
-
-input[type=text], select {
-	width: 100%;
-    padding: 1vw 1vw;
-    margin: 1vw 0;
-    display: inline-block;
-    border: .1vw solid #ccc;
-    border-radius: .5vw;
-    box-sizing: border-box;
-    font-size: 2vw;
-    font-family: 'Rajdhani', sans-serif; 
+    text-align: center;
 }
 
 input[type=submit] {
-    background-color: #4CAF50;
+	background-color: #fd0002;
     color: white;
-    padding: 1vw 2vw;
+    padding: 1vw 1vw;
     text-align: center;
     font-size: 1.5vw;
     margin: 1vw 0;
     border: none;
     border-radius: .5vw;
     cursor: pointer;
+    float: center;
 }
 
 input[type=submit]:hover {
-    background-color: #3f9144;
+    background-color: #ab0103;
 }
 
 .cancel {
-    background-color: #fd0002;
+    background-color: #4CAF50;
     color: white;
     padding: 1vw 1.3vw;
     text-align: center;
@@ -73,12 +63,7 @@ input[type=submit]:hover {
 }
 
 .cancel:hover {
-    background-color: #ab0103;
-}
-
-label {
-	font-size: 3.5vw;
-	font-family: 'Rajdhani', sans-serif;
+	background-color: #3f9144;
 }
 
 .footer-grid {
